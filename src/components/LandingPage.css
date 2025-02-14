@@ -1,0 +1,53 @@
+.landing-page {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #ddb3d6;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: #bbb;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .buttons .MuiButton-root {
+    padding: 10px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-transform: none;
+  }
+  
+  .buttons .MuiButton-root:hover {
+    background-color: #DD88CF; /* Slightly darker coral on hover */
+    color: white;
+}
+
+.buttons .MuiButton-containedPrimary {
+    background-color: #951d97; /* Teal */
+    color: #fff;
+}
+
+.buttons .MuiButton-containedPrimary:hover {
+    background-color: #4B164C; /* Darker Teal on Hover */
+}

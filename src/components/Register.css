@@ -1,0 +1,92 @@
+.reg {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #ffffff;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  padding: 20px 30px;
+  width: fit-content;
+  height: 50vh;
+  background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Soft elevated shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.box:hover {
+  backdrop-filter: blur(20px);
+  transform: scale(1.02); /* Slight hover effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.box h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.form {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 400px;
+  padding: 10px;
+}
+
+/* Ensure 2 inputs per row */
+.form .MuiTextField-root {
+  flex: 1 1 45%;
+}
+
+/* Input field styling */
+.MuiTextField-root input {
+  color: #212121;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* Hover effect */
+.MuiTextField-root input:hover {
+  background: #e2e8f0;
+}
+
+.MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Adjust focused label color */
+.MuiInputLabel-root.Mui-focused {
+  color: #e8eb25;
+}
+
+/* Focus effect */
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: hwb(286 16% 12% / 0.7) !important;
+}
+
+/* Button text color */
+.MuiButton-root {
+    color: rgba(255, 255, 255, 0.9);
+    outline-color: #ddb3d6;
+}
