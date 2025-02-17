@@ -1,9 +1,7 @@
-# React + Vite
+# 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Private Route working, but need session data to be valid to navigate to that page
 
-Currently, two official plugins are available:
+- Normal Route is also working
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# auth-Frontend
+- Make PrivaateRouter.jsx file work, which is depended on SessionProvider.jsx

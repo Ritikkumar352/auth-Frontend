@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import "./Login.css";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 // What's in response and what's in result... READ !!!
 
@@ -18,6 +19,8 @@ function Login() {
     setLoginFormData({ ...loginFormData, [e.target.name]: e.target.value });
   };
 
+  const navigate = useNavigate();
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,16 +30,12 @@ function Login() {
         headers: { "content-Type": "application/json" },
         body: JSON.stringify(loginFormData),
       });
+      const result = await response.json();
       if (response.ok) {
-        const result = await response.json();
         console.log("Success: ", result.message);
-      } else if (response.status === 404) {
-        const result = await response.json();
-        console.log("Error:", result.message);
-        alert(result.message, "from backend");
-        alert("User not found");
+        console.log(response);
+        navigate("/dash-board");
       } else {
-        const result = await response.json();
         console.log(result.message + "messageeee");
         console.log("Unexpected Error:", response.status);
       }
