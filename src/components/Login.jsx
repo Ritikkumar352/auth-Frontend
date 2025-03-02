@@ -29,6 +29,7 @@ function Login() {
         method: "POST",
         headers: { "content-Type": "application/json" },
         body: JSON.stringify(loginFormData),
+        credentials:"include"  // read this
       });
       const result = await response.json();
       if (response.ok) {

@@ -6,6 +6,7 @@ import About from "./components/About";
 import Profile from "./components/Profile";
 import Dashboard from "./components/Dashboard";
 import PrivateRouter from "./components/Privaterouter";
+import Logout from "./components/logout";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      {/* <Route path="/dash-board" element={<Dashboard />} /> */}  
+      {/* <Route path="/dash-board" element={<Dashboard />} /> */}
       {/* this dash-board working */}
       {/* <Route path="/about" element={<About />} /> */}
 
@@ -45,7 +46,16 @@ function App() {
             <Dashboard />
           </PrivateRouter>
         }
-      />      
+      />
+
+      <Route
+        path="/logout"
+        element={
+          <PrivateRouter>
+            <Logout/>
+          </PrivateRouter>
+        }
+      />
     </Routes>
   );
 }

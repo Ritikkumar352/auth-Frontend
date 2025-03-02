@@ -2,10 +2,16 @@ import { Navigate } from "react-router-dom";
 import { useSession } from "../SessionProvider";
 
 const PrivateRouter = ({ children }) => {
-  const session=useSession();
-  if (!session?.userId) {
-    console.log("you are not logged in, please login--- [[Private route]");
+  const session = useSession();
 
+  if (session === undefined) {
+    return <p>Please wait, Loading....</p>;
+  }
+
+  console.log(session?.userId, "session user id");
+
+  if (!session?.userId) {
+    console.log("You are not logged in, please login --- [[Private route]]");
     return <Navigate to="/login" />;
   }
 

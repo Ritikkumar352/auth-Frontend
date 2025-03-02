@@ -5,15 +5,21 @@ const SessionContext = createContext(null);
 export const useSession = () => useContext(SessionContext);
 
 const SessionProvider = ({ children }) => {
-  const [session, setSession] = useState(null);
+  const [session, setSession] = useState(undefined);
 
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const response = await fetch("http://localhost:8080/session-data");
+        const response = await fetch("http://localhost:8080/session-data",{
+          credentials:"include",
+        });
         if (response.ok) {
+          
           const data = await response.json();
           setSession(data);
+          // log
+          // console.log(session.userId);
+          console.log(data);
         } else {
           console.log("no response-- session=null");
           setSession(null);
